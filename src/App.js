@@ -1,7 +1,7 @@
 import './App.css';
 import { useEffect } from "react";
 import Header from "./components/Header/Header";
-import { useTelegram } from "./components/useTelegram";
+import { useTelegram } from "./hooks/useTelegram";
 import ProductList from "./components/ProductList/ProductList";
 import {Routes, Route} from "react-router-dom";
 import Form from "./components/Form/Form";
@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     tg.ready()
-  }, [])
+  }, [tg])
 
   return (
     <div className="App">

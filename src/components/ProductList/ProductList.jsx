@@ -1,9 +1,9 @@
 import React from 'react';
 import './productList.css'
 
-const ProductList = (props) => {
+const ProductList = () => {
   return (
-    <div>
+    <div className="product-list">
       ProductList
     </div>
   );

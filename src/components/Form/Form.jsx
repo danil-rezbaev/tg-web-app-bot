@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './form.css'
-import { useTelegram } from "../useTelegram";
+import { useTelegram } from "../../hooks/useTelegram";
 
-const Form = (props) => {
+const Form = () => {
   const [country, setCountry] = useState(null)
   const [street, setStreet] = useState(null)
   const [select, setSelect] = useState(null)
@@ -22,16 +22,16 @@ const Form = (props) => {
   const {tg} = useTelegram()
 
   useEffect(() => {
-    if(street || country) {
-      tg.MainButton.show()
+    if(!street || !country) {
+      tg.MainButton.hide();
     } else {
-      tg.MainButton.hide()
+      tg.MainButton.show();
     }
 
     tg.MainButton.setParams({
       text: "Отправить данные"
     })
-  }, [country, street])
+  }, [country, street, tg.MainButton])
 
   return (
     <div className="form">
