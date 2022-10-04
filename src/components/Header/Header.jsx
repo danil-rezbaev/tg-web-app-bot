@@ -4,17 +4,10 @@ import './header.css'
 
 const tg = window.Telegram.WebApp
 
-const Header = (props) => {
-  const {
-    className,
-    children
-  } = props
-
-
+const Header = () => {
   const onClose = () => {
     tg.close()
   }
-
 
   return (
     <header className="header">
@@ -22,7 +15,7 @@ const Header = (props) => {
         Закрыть
       </Button>
 
-      <span className="username">{ tg.initDataUnsafe?.user?.username}</span>
+      <span className="username"> Привет, { tg.initDataUnsafe?.user?.username}</span>
     </header>
   );
 };
