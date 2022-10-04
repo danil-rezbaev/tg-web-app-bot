@@ -28,7 +28,7 @@ const Form = () => {
       street
     }
     tg.sendData(JSON.stringify(data))
-  }, [])
+  }, [tg])
 
   useEffect(() => {
     tg.onEvent('mainButtonClicked', onSendData)
@@ -36,7 +36,7 @@ const Form = () => {
     return () => {
       tg.offEvent('mainButtonClicked', onSendData)
     }
-  }, [])
+  }, [tg])
 
   useEffect(() => {
     if(!street || !country) {
