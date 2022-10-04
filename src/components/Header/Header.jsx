@@ -1,13 +1,10 @@
 import React from 'react';
 import Button from "../Button/Button";
 import './header.css'
-
-const tg = window.Telegram.WebApp
+import { useTelegram } from "../useTelegram";
 
 const Header = () => {
-  const onClose = () => {
-    tg.close()
-  }
+  const {onClose, user} = useTelegram()
 
   return (
     <header className="header">
@@ -15,7 +12,7 @@ const Header = () => {
         Закрыть
       </Button>
 
-      <span className="username"> Привет, { tg.initDataUnsafe?.user?.username}</span>
+      <span className="username"> Привет, { user }</span>
     </header>
   );
 };

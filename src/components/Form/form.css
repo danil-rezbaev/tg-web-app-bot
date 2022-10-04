@@ -1,0 +1,11 @@
+.form {
+    padding: 10px 5px;
+    border: 1px solid;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.input, .select {
+    display: block;
+    margin: 10px 0;
+}
