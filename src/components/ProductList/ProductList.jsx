@@ -7,6 +7,7 @@ import { useTelegram } from "../../hooks/useTelegram";
 const ProductList = () => {
   const [addedItems, setAddedItems] = useState([])
   const {tg} = useTelegram()
+
   const getTotalPrice = (items = []) => {
     return items.reduce((acc, item) => {
       return acc + item.price
@@ -28,6 +29,7 @@ const ProductList = () => {
     if (newItems.length === 0) {
       tg.MainButton.hide()
     } else {
+      alert('show')
       tg.MainButton.show()
       tg.MainButton.setParams({
         text: `Купить ${getTotalPrice(newItems)}`
