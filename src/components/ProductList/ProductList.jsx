@@ -9,9 +9,7 @@ const ProductList = () => {
   const {tg} = useTelegram()
 
   const getTotalPrice = (items = []) => {
-    return items.reduce((acc, item) => {
-      return acc + item.price
-    })
+    return items.reduce((acc, item) => acc + +item.price, 0)
   }
 
   const onAdd = (product) => {
