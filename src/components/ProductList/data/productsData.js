@@ -1,0 +1,5 @@
+export const productsData = [
+  {id:1, title: "Product", description: "Description", price: 1232, img: "https://storage-cdn8.gloria-jeans.ru/medias/GJN017325-1-01-1200Wx1200H.jpg?context=bWFzdGVyfHByb2R1Y3R8MTQxMzQ4fGltYWdlL2pwZWd8aDE3L2hlZS85MjM5ODQ1ODk2MjIyL0dKTjAxNzMyNS0xLTAxXzEyMDBXeDEyMDBILmpwZ3w4NTZiODFmNzAxZWY4YTQyMDA2NzFkNmYwNzZmMTQ5MzRlNTEyNmYyOTIzNWJkYmMxZGI1NmRkOTNhMDExY2U2"},
+  {id:2, title: "Product", description: "Description", price: 1232, img: "https://storage-cdn8.gloria-jeans.ru/medias/GJN017325-1-01-1200Wx1200H.jpg?context=bWFzdGVyfHByb2R1Y3R8MTQxMzQ4fGltYWdlL2pwZWd8aDE3L2hlZS85MjM5ODQ1ODk2MjIyL0dKTjAxNzMyNS0xLTAxXzEyMDBXeDEyMDBILmpwZ3w4NTZiODFmNzAxZWY4YTQyMDA2NzFkNmYwNzZmMTQ5MzRlNTEyNmYyOTIzNWJkYmMxZGI1NmRkOTNhMDExY2U2"},
+  {id:3, title: "Product", description: "Description", price: 1232, img: "https://storage-cdn8.gloria-jeans.ru/medias/GJN017325-1-01-1200Wx1200H.jpg?context=bWFzdGVyfHByb2R1Y3R8MTQxMzQ4fGltYWdlL2pwZWd8aDE3L2hlZS85MjM5ODQ1ODk2MjIyL0dKTjAxNzMyNS0xLTAxXzEyMDBXeDEyMDBILmpwZ3w4NTZiODFmNzAxZWY4YTQyMDA2NzFkNmYwNzZmMTQ5MzRlNTEyNmYyOTIzNWJkYmMxZGI1NmRkOTNhMDExY2U2"},
+]
