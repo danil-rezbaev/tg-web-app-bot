@@ -7,11 +7,11 @@ import {Routes, Route} from "react-router-dom";
 import Form from "./components/Form/Form";
 
 function App() {
-  const {tg} = useTelegram()
+  const {tg} = useTelegram();
 
   useEffect(() => {
-    tg.ready()
-  }, [tg])
+    tg.ready();
+  }, [])
 
   return (
     <div className="App">
