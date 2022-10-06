@@ -10,12 +10,12 @@ const ProductItem = (props) => {
   } = props
 
   const onAddHandler = () => {
-    onAdd(product)
+    onAdd(product);
   }
 
   return (
     <div className={"product-item" + className}>
-      <img src={product.img} alt="" className="img"/>
+      <img src="https://www.klenmarket.ru/upload/shop_1/3/9/4/item_394098/shop_items_catalog_image394098.jpg" alt="" className="img"/>
       <b className="title">{product.title}</b>
       <p className="description">{product.description}</p>
 
