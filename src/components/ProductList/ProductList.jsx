@@ -26,7 +26,6 @@ const ProductList = () => {
       },
       body: JSON.stringify(data)
     })
-      .then(alert)
       .catch(alert)
   }, [addedItems, queryId])
 
