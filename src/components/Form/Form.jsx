@@ -3,6 +3,8 @@ import './form.css'
 import { useTelegram } from "../../hooks/useTelegram";
 
 const Form = () => {
+  const {tg} = useTelegram()
+
   const [country, setCountry] = useState(null)
   const [street, setStreet] = useState(null)
   const [select, setSelect] = useState(null)
@@ -18,8 +20,6 @@ const Form = () => {
   const onChangeSelect = (event) => {
     setSelect(event.target.value)
   }
-
-  const {tg} = useTelegram()
 
   const onSendData = useCallback(() => {
     const data = {
