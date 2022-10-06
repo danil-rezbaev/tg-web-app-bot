@@ -29,20 +29,22 @@ const ProductList = () => {
       totalPrice: getTotalPrice(addedItems),
       queryId,
     }
-    fetch('http://192.168.0.2:8000/web-data', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data)
-    }).catch(alert)
+    // fetch('http://192.168.0.2:8000/web-data', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify(data)
+    // }).catch(alert)
+
+    alert(data)
   }, [addedItems, queryId])
 
   useEffect(() => {
     tg.onEvent('mainButtonClicked', onSendData)
-    return () => {
-      tg.offEvent('mainButtonClicked', onSendData)
-    }
+    // return () => {
+    //   tg.offEvent('mainButtonClicked', onSendData)
+    // }
   }, [tg, onSendData])
 
   const onAdd = (product) => {
