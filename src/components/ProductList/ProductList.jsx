@@ -8,6 +8,9 @@ const ProductList = () => {
   const [addedItems, setAddedItems] = useState([])
   const {tg, queryId} = useTelegram()
 
+  const getTotalPrice = (items = []) => {
+    return items.reduce((acc, item) => acc + +item.price, 0)
+  }
 
   const onSendData = useCallback(() => {
     const data = {
@@ -22,7 +25,7 @@ const ProductList = () => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(data)
-    })
+    }).catch(alert)
   }, [addedItems, queryId])
 
   useEffect(() => {
@@ -32,10 +35,6 @@ const ProductList = () => {
       tg.offEvent('mainButtonClicked', onSendData)
     }
   }, [onSendData, tg])
-
-  const getTotalPrice = (items = []) => {
-    return items.reduce((acc, item) => acc + +item.price, 0)
-  }
 
   const onAdd = (product) => {
     const alreadyAdded = addedItems.find(item => item.id === product.id)
