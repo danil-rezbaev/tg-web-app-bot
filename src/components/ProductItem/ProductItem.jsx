@@ -14,7 +14,7 @@ const ProductItem = (props) => {
   }
 
   return (
-    <div className={"product-item" + className}>
+    <div className={"product-item " + className}>
       <img src="https://www.klenmarket.ru/upload/shop_1/3/9/4/item_394098/shop_items_catalog_image394098.jpg" alt="" className="img"/>
       <b className="title">{product.title}</b>
       <p className="description">{product.description}</p>

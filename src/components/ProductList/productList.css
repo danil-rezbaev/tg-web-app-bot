@@ -1,10 +1,6 @@
 .product-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.item {
-    margin-right: 10px;
-    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    grid-gap: 20px;
 }

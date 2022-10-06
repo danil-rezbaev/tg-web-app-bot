@@ -29,13 +29,13 @@ const ProductList = () => {
       totalPrice: getTotalPrice(addedItems),
       queryId,
     }
-    fetch('http://85.119.146.179:8000/web-data', {
+    fetch('http://192.168.0.2:8000/web-data', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(data)
-    })
+    }).catch(alert)
   }, [addedItems, queryId])
 
   useEffect(() => {
@@ -68,12 +68,11 @@ const ProductList = () => {
   }
 
   return (
-    <div className={'list'}>
+    <div className={'product-list'}>
       {products.map(item => (
         <ProductItem
           product={item}
           onAdd={onAdd}
-          className={'item'}
         />
       ))}
     </div>
